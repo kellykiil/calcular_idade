@@ -1,0 +1,22 @@
+from logging import raiseExceptions
+
+for ano in range(1922,2021):
+   while True:
+     print("Digite seu nome completo")
+     nome = input()
+     if nome !="":
+      break
+     else:
+       print("Favor digitar seu nome completo")
+   try:
+     print("Que ano você nasceu? ")
+     ano_nascimento = input() 
+     ano_nascimento = int(ano_nascimento) 
+     if ano_nascimento < 1922 or ano_nascimento>2021:
+       raise ValueError
+     else:
+      idade = 2022 - ano_nascimento
+     print("Seu nome é" , nome , "você terá em 2022" ,idade, "anos")
+     
+   except ValueError:
+     print("Favor digitar valores validos nos campos.") 
